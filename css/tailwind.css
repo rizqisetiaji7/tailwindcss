@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
+/* Inline Existing Utilities */
+/* .btn {
+    @apply inline-block px-5 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 hover:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-1 focus:ring-indigo-500 focus:ring-opacity-40 active:bg-indigo-700 transform transition text-white text-sm sm:text-base shadow-lg uppercase font-semibold tracking-wider;
+} */
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply inline-block px-5 py-3 rounded-lg focus:outline-none focus:ring focus:ring-offset-1 text-sm sm:text-base uppercase font-semibold tracking-wider;
+    }
+
+    .btn-primary {
+        @apply bg-indigo-600 hover:bg-indigo-500 focus:ring-indigo-500 focus:ring-opacity-40 active:bg-indigo-700 text-white;
+    }
+
+    .btn-secondary {
+        @apply bg-gray-300 hover:bg-gray-200 focus:ring-gray-300 focus:ring-opacity-40 active:bg-gray-400 text-gray-800;
+    }
+}
